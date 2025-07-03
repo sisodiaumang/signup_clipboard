@@ -53,7 +53,7 @@ signup_clipboard/
 ## 🚀 Live Demo
 
 🔗 **View Project:**  
-[https://umangsisodia.github.io/signup_clipboard](https://umangsisodia.github.io/signup_clipboard)
+[https://github.com/sisodiaumang/signup_clipboard](https://umangsisodia.github.io/signup_clipboard)
 
 ---
 
