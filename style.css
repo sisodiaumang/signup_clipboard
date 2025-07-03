@@ -17,8 +17,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background: linear-gradient(to bottom ,rgb(198, 74, 3),rgb(255, 247, 0));
- */
+
 }
 .warning{
     display: none;
