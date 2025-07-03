@@ -21,19 +21,6 @@ body {
 .warning{
     display: none;
 }
-footer {
-    display: inline-flex;
-    background-color: black;
-    height: 5vh;
-    color: white;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    font-family: "Roboto", sans-serif, cursive;
-    bottom: 0px;
-    position: absolute;
-    z-index: 2;
-}
 main {
     height: auto;
     width: 516px;
@@ -400,7 +387,7 @@ body{
     border-radius: 7px;
     border: 2px solid white;
 }}
-@media screen and (max-width:750px ){
+@media screen and (max-width:725px ){
 .clipboard{
     display: none;
 }
