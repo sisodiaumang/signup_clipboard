@@ -365,7 +365,7 @@ label {
 }
 }
 
-@media screen and (max-height:800px ){
+@media screen and (max-height:725px ){
 .clipboard{
     display: none;
 }
@@ -387,7 +387,7 @@ body{
     border-radius: 7px;
     border: 2px solid white;
 }}
-@media screen and (max-width:725px ){
+@media screen and (max-width:750px ){
 .clipboard{
     display: none;
 }

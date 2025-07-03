@@ -9,7 +9,7 @@ This project is a **stylized and animated SignUp / SignIn page** inspired by the
 - 📋 **Clipboard-like design** with paper shadows and pins
 - 🧻 **Paper-ball animation** while switching between SignUp and SignIn
 - 👁️‍🗨️ **Show/Hide password** toggle
-- 📱 **Responsive screen check** — shows a warning if screen height < `800px` or width < `725px`
+- 📱 **Responsive screen check** — shows a warning if screen height < `725px` or width < `750px`
 - 🔊 **Page transition sound effects**
 - 💡 Custom UI using *Winky Rough* font
 
@@ -17,7 +17,7 @@ This project is a **stylized and animated SignUp / SignIn page** inspired by the
 
 ## 📐 Responsive Behavior
 
-If the screen is too small (height < `800px` or width < `725px`), the entire site content is hidden and a warning message appears:
+If the screen is too small (height < `725px` or width < `750px`), the entire site content is hidden and a warning message appears:
 
 
 ✅ Implemented using **pure CSS media queries** — no JavaScript required.
