@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup&Signin</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="apple touch icon" href="img/apple-touch-icon.png" type="png">
+    <link rel="icon" href="img/favicon-32x32.png">
+    
+</head>
+<body>
+    <div class="warning">Please open this site in a display with height more then 800px and width 750px</div>
+    <div class="background">
+        <img class="ball" src="img/ball.png" alt="ball" height="150px" width="150px">
+    </div>
+    <main>
+        <div class="clipboard">
+            <div class="clip">
+                <div class="pin1"></div>
+                <div class="bar">
+                    <div class="backbar1"></div>
+                    <div class="backbar2"></div>
+                </div>
+                <div class="pin2"></div>
+            </div>
+            <div class="signupshadow1"></div>
+            <div class="signupshadow2"></div>
+            <div class="signupshadow3"></div>
+            <div class="signupshadow4"></div>
+
+            <div class="signuppage">
+                <h2 id="sup">HI , Ready to SignUp</h2>
+                <h3 id="create">Create Account</h3>
+                <form>
+                    <input class="in" type="text" id="name" placeholder="Enter your name">
+                    <input class="in" type="email" id="email" placeholder="Enter your email">
+                    <input class="in" type="password" id="pass1" placeholder="Enter password">
+                    <input class="in" type="password" id="pass2" placeholder="Confirm password">
+                    <div class="sp1">
+                        <label for="showpass1">Show Password</label>
+                        <input type="checkbox" id="showpass1">
+                    </div>
+                    <button type="submit" id="signup">SignUp</button>
+                    <div class="signin-line">
+                        <span>Already have an account</span>
+                        <button id="gotosignin">SignIn</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="loginpage">
+                <h2 id="lup">Welcome Back ,</h2>
+                <h2 id="lup">Ready to Login</h2>
+                <form>
+                    <input class="in" type="email" id="email2" placeholder="Enter your email">
+                    <input class="in" type="password" id="pass3" placeholder="Enter password">
+                    <div class="sp2">
+                        <label for="showpass2">Show Password</label>
+                        <input type="checkbox" id="showpass2">
+                    </div>
+                    <button type="submit" id="signup">SignIn</button>
+                    <p id="spp">Don't have an account <button id="gotosignup" type="button">SignUp</button></p>
+                </form>
+            </div>
+        </div>
+    </main>
+    <audio id="switchSound" src="sound/page.mp3" preload="auto"></audio>
+    <audio id="switchSound2" src="sound/page2.mp3" preload="auto"></audio>
+    <footer>&copy;-All Rights Reserved </footer>
+    <script>
+        const signUpPage = document.querySelector('.signuppage');
+        const loginPage = document.querySelector('.loginpage');
+        const gotoSignin = document.getElementById('gotosignin');
+        const gotoSignup = document.getElementById('gotosignup');
+        const switchSound = document.getElementById('switchSound');
+        const switchSound2 = document.getElementById('switchSound2');
+        function playSwitchSound() {
+            switchSound.currentTime = 0;
+            switchSound2.currentTime = 0;
+            switchSound.play();
+            switchSound2.play();
+        }
+        gotoSignin.addEventListener('click', function (e) {
+            e.preventDefault();
+            signUpPage.classList.remove('active');
+            loginPage.classList.add('active');
+            playSwitchSound();
+        });
+        gotoSignup.addEventListener('click', function (e) {
+            e.preventDefault();
+            loginPage.classList.remove('active');
+            signUpPage.classList.add('active');
+            playSwitchSound();
+        });
+        signUpPage.classList.add('active');
+        const ball = document.querySelector('.ball');
+        function flyBall() {
+            ball.style.display = 'block';            // Show the ball
+            ball.classList.add('fly');
+
+            // Optional: Hide and reset after animation
+            setTimeout(() => {
+                ball.classList.remove('fly');
+                ball.style.display = 'none';        // Hide again
+            }, 1000); // Match animation duration
+        }
+        gotoSignin.addEventListener('click', function (e) {
+            e.preventDefault();
+            flyBall();
+            signUpPage.classList.remove('active');
+            loginPage.classList.add('active');
+            playSwitchSound();
+        });
+        gotoSignup.addEventListener('click', function (e) {
+            e.preventDefault();
+            flyBall();
+            loginPage.classList.remove('active');
+            signUpPage.classList.add('active');
+            playSwitchSound();
+        });
+        const showPass1 = document.getElementById("showpass1");
+        const pass1 = document.getElementById("pass1");
+        const pass2 =document.getElementById("pass2");
+        const showPass2 = document.getElementById("showpass2");
+        const pass3 = document.getElementById("pass3");
+        showPass1.addEventListener("change", function () {
+            pass1.type = this.checked ? "text" : "password";
+            pass2.type=this.checked? "text":"password";
+        });
+        showPass2.addEventListener("change", function () {
+            pass3.type = this.checked ? "text" : "password";
+        });
+    </script>
+</body>
+</html>
